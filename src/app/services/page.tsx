@@ -1,8 +1,11 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
+interface Props{
+  params: {id: string}
+}
 
-const page = () => {
+const page = async () => {
   // const services = await getEntries()
   return (
     <div className="text-white">

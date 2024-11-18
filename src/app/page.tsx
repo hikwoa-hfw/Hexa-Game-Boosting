@@ -15,7 +15,7 @@ export default function Home() {
       <MarqueeComponent />
       <ValueProposition />
       <CompanyOverview />
-      {/* <Service /> */}
+      <Service />
       <Testimonials />
       <CompanyTagline />
     </div>

@@ -3,11 +3,8 @@ import { Blog } from "@/type/blog";
 import Link from "next/link";
 import { FC } from "react";
 
-interface ServiceProps {
-  blog: Blog;
-}
 
-const Service: FC<ServiceProps> = ({blog}) => {
+const Service: FC = () => {
   return (
     <div className="container mx-auto w-[1280px]">
       <div>
