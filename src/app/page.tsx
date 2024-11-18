@@ -8,13 +8,14 @@ import Testimonials from "../components/Testimonials";
 
 
 export default function Home() {
+  
   return (
     <div className="text-white">
       <HeroSection />
       <MarqueeComponent />
       <ValueProposition />
       <CompanyOverview />
-      <Service />
+      {/* <Service /> */}
       <Testimonials />
       <CompanyTagline />
     </div>

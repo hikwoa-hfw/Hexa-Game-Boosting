@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import { getEnabledCategories } from "trace_events";
 
 
 const page = () => {
