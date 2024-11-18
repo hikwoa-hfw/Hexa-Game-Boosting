@@ -9,15 +9,15 @@
 // import { Metadata, ResolvingMetadata } from "next";
 
 // interface Props {
-//   params: { id: number };
+//   params: { id: string };
 // }
 
 // export const generateMetadata = async ( {params}: Props, parent: ResolvingMetadata): Promise<Metadata> => {
-//   const response = await getEntries(params.id)
-//   const service = 
-//   const image = service?.thumbnail
+//   const service = await getEntries(params.id)
+//   const image = service?.thumbnail!
 //   const previousImages = (await parent).openGraph?.images
 //   return{
+//     title: "Hexa Kumpeni | " + service?.title
 
 //   }
 // }

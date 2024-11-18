@@ -10,48 +10,23 @@ const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
 });
 
-export const getEntries = async (page: number) => {
+export const getEntries = async () => {
   try {
     const response = await client.getEntries({
-      content_type: "blog",
+      content_type: "services",
     });
 
-    const blogs = response.items.map((blog: responseEntry) => {
+    const services = response.items.map((service: responseEntry) => {
       return {
-        entryId: blog.sys.id,
-        title: blog.fields.title,
-        description: blog.fields.description,
-        thumbnail: "https:" + blog.fields.thumbnail.fields.file.url,
-        author: blog.fields.author,
-        category: blog.fields.category,
-        createdAt: blog.fields.createdAt,
-        content: blog.fields.content,
+        entryId: service.sys.id,
+        title: service.fields.title,
+        thumbnail: "https:" + service.fields.thumbnail.fields.file.url,
       };
     });
 
-    return {
-      data: blogs,
-      meta: { total: response.total, limit: response.limit },
-    };
+    return services
   } catch (error) {
     console.log(error);
   }
 };
 
-export const getEntry = async (entryId: string) => {
-  try {
-    const { sys, fields }: responseEntry = await client.getEntry(entryId);
-    return {
-      entryId: sys.id,
-      title: fields.title,
-      description: fields.description,
-      thumbnail: "https:" + fields.thumbnail.fields.file.url,
-      author: fields.author,
-      category: fields.category,
-      createdAt: fields.createdAt,
-      content: fields.content,
-    };
-  } catch (error) {
-    console.log(error);
-  }
-};

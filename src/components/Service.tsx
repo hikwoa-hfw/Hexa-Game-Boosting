@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FC } from "react";
 
 
-const Service: FC = () => {
+const Service = () => {
   return (
     <div className="container mx-auto w-[1280px]">
       <div>
