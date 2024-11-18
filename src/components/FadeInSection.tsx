@@ -1,8 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { PiAsterisk } from "react-icons/pi";
 
 interface FadeInSectionProps {
   children: React.ReactNode;

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { outfit } from "@/utils/font";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,10 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.className} antialiased`}
-      >
+      <body className={`${outfit.className} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
